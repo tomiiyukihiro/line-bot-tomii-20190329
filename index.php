@@ -1,5 +1,4 @@
 <?php
-define('DEBUG','debug.txt');
 function city_id($text) {
 	$city=[
 		'北海道'=>'016010',
@@ -73,4 +72,3 @@ function bot($event) {
 }
 
 ?>
-
