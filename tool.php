@@ -43,4 +43,9 @@ function load($file) {
 	return json_decode($json);
 }
 
+function save($file, $object) {
+	$json=json_encode($object);
+	file_put_contents($file, $json);
+}
+
 ?>
