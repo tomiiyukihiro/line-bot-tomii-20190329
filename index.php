@@ -1,7 +1,6 @@
 <?php
 define('DEBUG','debug.txt');
 $input=file_get_contents('php://input');
-file_put_contents(DEBUG, 'DEBUG \n');
 file_put_contents(DEBUG, $input);
 
 function city_id($text) {
@@ -61,17 +60,18 @@ file_put_contents(DEBUG, $name);
 }
 
 function bot($event) {
-	if (empty($event->message->text)) return;
+	//if (empty($event->message->text)) return;
 
-	if (!preg_match('/天気/', $event->message->text)) {
-file_put_contents(DEBUG, '!preg_match');
-		return;
-	}
+	//if (!preg_match('/天気/', $event->message->text)) {
+//file_put_contents(DEBUG, '!preg_match');
+//		return;
+//	}
 
 	$id=city_id($event->message->text);
 	if (empty($id)) return;
 
-	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
+	//$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
+	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010');
 file_put_contents(DEBUG, $weather);
 	$text=$weather->location->city."の天気は\n";
 file_put_contents(DEBUG, $text);
