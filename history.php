@@ -4,7 +4,7 @@ function history($event) {
 
 	if (!preg_match('/•ÏX—š—ð/', $event->message->text)) return;
 
-	reply($event, '2019/03/29ì¬ \n2019/03/30“V‹C \n');
+	reply($event, '2019/03/29ì¬');
 }
 
 ?>
