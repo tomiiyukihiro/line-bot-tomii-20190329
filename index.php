@@ -13,7 +13,7 @@ if (!empty($input)) {
 	foreach ($events as $event) {
 		weather($event);
 		hello($event);
-		history($event)
+		history($event);
 	}
 }
 
