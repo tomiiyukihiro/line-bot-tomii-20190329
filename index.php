@@ -7,6 +7,7 @@ debug('input', $input);
 
 require_once('weather.php');
 require_once('hello.php');
+require_once('history.php');
 
 if (!empty($input)) {
 	$events=json_decode($input)->events;
