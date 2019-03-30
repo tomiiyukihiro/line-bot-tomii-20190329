@@ -16,7 +16,7 @@ if (!empty($input)) {
 		weather($event);
 		hello($event);
 		history($event);
-		echo($event);
+		//echo($event);
 	}
 }
 
