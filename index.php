@@ -70,5 +70,6 @@ function bot($event) {
 	$text.='です。';
 	reply($event, $text);
 }
+	reply($text);
 
 ?>
