@@ -7,7 +7,8 @@ debug('input', $input);
 if (!empty($input)) {
 	$events=json_decode($input)->events;
 	foreach ($events as $event) {
-		bot($event);
+		if (preg_match('/“V‹C/', $event->message->text)) weather($event);
+		//bot($event);
 	}
 }
 
