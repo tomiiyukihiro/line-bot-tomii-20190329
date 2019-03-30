@@ -30,6 +30,14 @@ function reply($event, $text) {
 	post('reply', $object);
 }
 
+function push($to, $text) {
+	$object=[
+		'to'=>$to,
+		'messages'=>[['type'=>'text', 'text'=>$text]]
+	];
+	post('push', $object);
+}
+
 function load($file) {
 	$json=file_get_contents($file);
 	return json_decode($json);
