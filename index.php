@@ -59,7 +59,7 @@ function bot($event) {
 
 	if (!preg_match('/天気/', $event->message->text)) return;
 
-	$id=city_id(event->message->text);
+	$id=city_id($event->message->text);
 	if (empty($id)) return;
 
 	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
