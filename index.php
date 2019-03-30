@@ -1,4 +1,8 @@
 <?php
+define('DEBUG','debug.txt');
+$input=file_get_contents('php://input');
+file_put_contents(DEBUG, $input);
+
 function city_id($text) {
 	$city=[
 		'北海道'=>'016010',
@@ -51,23 +55,30 @@ function city_id($text) {
 	];
 	foreach ($city as $name=>$id) {
 		if (preg_match('/'.$name.'/', $text)) return $id;
+file_put_contents(DEBUG, $name);
 	}
 }
 
 function bot($event) {
 	if (empty($event->message->text)) return;
 
-	if (!preg_match('/天気/', $event->message->text)) return;
+	if (!preg_match('/天気/', $event->message->text)) {
+file_put_contents(DEBUG, '!preg_match');
+		return;
+	}
 
 	$id=city_id($event->message->text);
 	if (empty($id)) return;
 
 	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
+file_put_contents(DEBUG, $weather);
 	$text=$weather->location->city."の天気は\n";
+file_put_contents(DEBUG, $text);
 	foreach ($weather->forecasts as $forecast) {
 		$text.=$forecast->dateLabel.' '.$forecast->telop."\n";
 	}
 	$text.='です。';
+file_put_contents(DEBUG, $text);
 	reply($event, $text);
 }
 
