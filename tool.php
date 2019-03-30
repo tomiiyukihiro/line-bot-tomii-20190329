@@ -10,7 +10,7 @@ function debug($title, $text) {
 function post($url, $object) {
 	$json=json_encode($object);
 	debug('output', $json);
-	$curl_curl_init('https://api.line.me/v2/bot/message/'.$url);
+	$curl=curl_init('https://api.line.me/v2/bot/message/'.$url);
 	curl_setopt($curl, CURLOPT_POST, true);
 	curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, [
