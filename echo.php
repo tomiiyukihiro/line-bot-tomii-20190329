@@ -4,3 +4,4 @@ function echo($event) {
 	reply($event->message->text);
 }
 ?>
+
