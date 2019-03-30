@@ -7,7 +7,7 @@ function debug($title, $text) {
 	file_put_contents(DEBUG, '['.$title.']'."\n".$text."\n\n", FILE_APPEND);
 }
 
-funcion post($url, $object) {
+function post($url, $object) {
 	$json=json_encode($object);
 	debug('output', $json);
 	$curl_curl_init('https://api.line.me/v2/bot/message/'.$url);
