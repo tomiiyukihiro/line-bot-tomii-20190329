@@ -71,5 +71,6 @@ function bot($event) {
 	reply($event, $text);
 }
 	reply($text);
+	reply($event, $text);
 
 ?>
