@@ -1,5 +1,5 @@
 <?php
-function echo_bot($event) {
+function echo($event) {
 	if (empty($event->message->text)) return;
 	reply($event, $event->message->text);
 }
