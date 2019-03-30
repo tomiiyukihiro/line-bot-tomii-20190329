@@ -63,23 +63,19 @@ function bot($event) {
 	//if (empty($event->message->text)) return;
 
 	//if (!preg_match('/天気/', $event->message->text)) {
-//file_put_contents(DEBUG, '!preg_match');
-//		return;
-//	}
+	//	return;
+	//}
 
-	$id=city_id($event->message->text);
-	if (empty($id)) return;
+	//$id=city_id($event->message->text);
+	//if (empty($id)) return;
 
 	//$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
 	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010');
-file_put_contents(DEBUG, $weather);
 	$text=$weather->location->city."の天気は\n";
-file_put_contents(DEBUG, $text);
 	foreach ($weather->forecasts as $forecast) {
 		$text.=$forecast->dateLabel.' '.$forecast->telop."\n";
 	}
 	$text.='です。';
-file_put_contents(DEBUG, $text);
 	reply($event, $text);
 }
 
