@@ -18,7 +18,7 @@ function post($url, $object) {
 		'Authorization: Bearer '.TOKEN
 	]);
 	$result=curl_exec($curl);
-	debug('result', $result);
+	debug('curl_exec result', $result);
 	curl_close($curl);
 }
 
