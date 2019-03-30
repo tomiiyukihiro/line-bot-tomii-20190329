@@ -30,4 +30,9 @@ function reply($event, $text) {
 	post('reply', $object);
 }
 
+function load($file) {
+	$json=file_get_contents($file);
+	return json_decode($json);
+}
+
 ?>
