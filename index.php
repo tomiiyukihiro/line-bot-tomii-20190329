@@ -78,7 +78,8 @@ function bot($event) {
 	//}
 	//$text.='です。';
 	//reply($event, $text);
-	reply($event, $weather->description->$text);
+	//reply($event, $weather->description->$text);
+	reply($event, 'こんにちは');
 }
 
 ?>
