@@ -7,7 +7,8 @@ debug('input', $input);
 if (!empty($input)) {
 	$events=json_decode($input)->events;
 	foreach ($events as $event) {
-		if (preg_match('/天気/', $event->message->text)) weather($event);
+		//if (preg_match('/天気/', $event->message->text)) weather($event);
+		weather($event);
 		//bot($event);
 	}
 }
