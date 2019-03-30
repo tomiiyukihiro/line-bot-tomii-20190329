@@ -11,10 +11,9 @@ require_once('hello.php');
 if (!empty($input)) {
 	$events=json_decode($input)->events;
 	foreach ($events as $event) {
-		//if (preg_match('/“V‹C/', $event->message->text)) weather($event);
-		hello($event);
 		weather($event);
-		//bot($event);
+		hello($event);
+		history($event)
 	}
 }
 
