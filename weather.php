@@ -55,7 +55,7 @@ function city_id($text) {
 	}
 }
 
-function bot($event) {
+function weather($event) {
 	if (empty($event->message->text)) return;
 
 	if (!preg_match('/天気/', $event->message->text)) return;
