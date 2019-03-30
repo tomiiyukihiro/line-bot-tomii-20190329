@@ -63,8 +63,8 @@ function bot($event) {
 	$id=city_id($event->message->text);
 	if (empty($id)) return;
 
-	//$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
-	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010');
+	$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city='.$id);
+	//$weather=load('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010');
 	$text=$weather->location->city."の天気は\n";
 	foreach ($weather->forecasts as $forecast) {
 		$text.=$forecast->dateLabel.' '.$forecast->telop."\n";
