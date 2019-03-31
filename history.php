@@ -6,7 +6,7 @@ function history($event) {
 
 	//$text=load('modify.txt');
 	//reply($event, $text[0]);
-	$text="2019/03/29作成 \n";
+	$text="2019/03/29作成"."\n";
 	$text.="2019/03/30天気 \n";
 	$text.="2019/03/30変更履歴 \n";
 	$text.="2019/03/30あいさつ \n";
