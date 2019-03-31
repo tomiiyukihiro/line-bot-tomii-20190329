@@ -48,4 +48,15 @@ function save($file, $object) {
 	file_put_contents($file, $json);
 }
 
+function reply_image($event, $original, $preview) {
+	$object=[
+		'replyToken'=>$event->replyToken,
+		'messages'=>[[
+			'type'=>'image',
+			'originalContentUrl'=>$original,
+			'previewImageUrl'=>$preview
+		]]
+	];
+	post('reply', $object);
+}
 ?>
