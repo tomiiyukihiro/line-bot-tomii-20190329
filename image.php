@@ -1,4 +1,5 @@
 <?php
+functio image($event) {
 	$cx='010352532364298676544:0xmnht5yd2c';
 	$key='AIzaSyDudFRiHD_hmgxQXeD5iK5hjxcbzdewTPI';
 	if(!preg_match('/画像検索$/', $event->message->text)) return;
@@ -22,5 +23,5 @@
 	$preview=preg_replace('/^http:/', 'https:', $preview);
 
 	reply_image($event, $original, $preview);
-
+}
 ?>
