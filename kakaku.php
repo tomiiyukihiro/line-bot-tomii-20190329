@@ -6,7 +6,7 @@ function kakaku($event) {
 	$url='https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222';
 	$url.='?applicationId='.$id;
 	$url.='&keyword='.urlencode($keyword);
-	$url.='&sort='.urlencode('+itemPrice');
+	//$url.='&sort='.urlencode('+itemPrice');
 	$url.='&elements=itemName,itemPrice,itemUrl';
 	$url.='&hits=3';
 	debug('url', $url);
