@@ -4,4 +4,3 @@ function echo_bot($event) {
 	reply($event, $event->message->text);
 }
 ?>
-
