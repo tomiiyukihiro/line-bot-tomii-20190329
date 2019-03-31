@@ -9,6 +9,7 @@ require_once('weather.php');
 require_once('hello.php');
 require_once('history.php');
 require_once('echo_bot.php');
+require_once('kakaku.php');
 
 if (!empty($input)) {
 	$events=json_decode($input)->events;
@@ -16,6 +17,8 @@ if (!empty($input)) {
 		weather($event);
 		hello($event);
 		history($event);
+		kakaku($event);
+
 		echo_bot($event);
 	}
 }
