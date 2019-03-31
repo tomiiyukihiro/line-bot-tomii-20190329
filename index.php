@@ -8,7 +8,7 @@ debug('input', $input);
 require_once('weather.php');
 require_once('hello.php');
 require_once('history.php');
-require_once('echo.php');
+require_once('echo_bot.php');
 
 if (!empty($input)) {
 	$events=json_decode($input)->events;
@@ -16,9 +16,8 @@ if (!empty($input)) {
 		weather($event);
 		hello($event);
 		history($event);
-		echo($event);
+		echo_bot($event);
 	}
 }
 
 ?>
-
