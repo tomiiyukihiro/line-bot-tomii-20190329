@@ -15,7 +15,7 @@
 	$item=$items[rand(0, count($items)-1)];
 
 	$original=$item->link;
-	$original=preg?replace('/^http:/', 'https:', $original);
+	$original=preg_replace('/^http:/', 'https:', $original);
 	debug('original', $original);
 
 	$preview=$item->image->thumbnailLink;
