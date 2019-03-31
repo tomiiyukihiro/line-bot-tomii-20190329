@@ -2,7 +2,7 @@
 	$cx='010352532364298676544:0xmnht5yd2c';
 	$key='AIzaSyDudFRiHD_hmgxQXeD5iK5hjxcbzdewTPI';
 	if(!preg_match('/画像検索$/', $event->message->text)) return;
-	$keyword=preg_replace('/画像検索$/, '', $event->message->text);
+	$keyword=preg_replace('/画像検索$/', '', $event->message->text);
 
 	$url='https://www.googleapis.com/customsearch/v1';
 	$url.='?cx='.$cx;
