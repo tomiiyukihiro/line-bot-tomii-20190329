@@ -10,7 +10,7 @@ require_once('hello.php');
 require_once('history.php');
 require_once('echo_bot.php');
 require_once('kakaku.php');
-require_once('image.php');
+require_once('image_bot.php');
 
 if (!empty($input)) {
 	$events=json_decode($input)->events;
@@ -19,7 +19,7 @@ if (!empty($input)) {
 		hello($event);
 		history($event);
 		kakaku($event);
-		image($event);
+		image_bot($event);
 
 		echo_bot($event);
 	}
