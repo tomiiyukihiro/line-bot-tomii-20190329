@@ -14,7 +14,8 @@ function kakaku($event) {
 	$result=load($url);
 	$text='「'.$keyword."」の検索結果です。\n\n";
 	foreach ($result->Items as $item) {
-		$text.=mb_substr($item->Item->itemName, 0, 40)."...\n";
+		//$text.=mb_substr($item->Item->itemName, 0, 40)."...\n";
+		$text.=$item->Item->itemName."\n";
 		$text.=$item->Item->itemProce."円\n";
 		$text.=$item->Item->itemUrl."\n\n";
 	}
