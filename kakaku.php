@@ -7,7 +7,7 @@ function kakaku($event) {
 	$url.='?applicationId='.$id;
 	$url.='&keyword='.urlencode($keyword);
 	//$url.='&sort='.urlencode('+itemPrice');
-	$url.='&sort='.urlencode('-updateTimestamp');
+	$url.='&sort='.urlencode('+updateTimestamp');
 	$url.='&elements=itemName,itemPrice,itemUrl';
 	$url.='&hits=2';
 	debug('url', $url);
