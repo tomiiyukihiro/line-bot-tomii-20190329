@@ -8,7 +8,7 @@ function kakaku($event) {
 	$url.='&keyword='.urlencode($keyword);
 	//$url.='&sort='.urlencode('+itemPrice');
 	$url.='&elements=itemName,itemPrice,itemUrl';
-	$url.='&hits=3';
+	$url.='&hits=2';
 	debug('url', $url);
 
 	$result=load($url);
